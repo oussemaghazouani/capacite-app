@@ -7,9 +7,7 @@ const LineChart = forwardRef(({ dataEntries, selectedIndex, onPointClick }, ref)
   const blinkInterval = useRef(null);
 
   // Expose the canvas ref to parent components
-  useImperativeHandle(ref, () => ({
-    current: chartRef.current
-  }));
+  useImperativeHandle(ref, () => chartRef.current);
 
   // Chart creation and update
   useEffect(() => {
