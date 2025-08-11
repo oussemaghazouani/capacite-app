@@ -1,7 +1,6 @@
 import * as XLSX from "xlsx";
 import jsPDF from "jspdf";
 
-// Télécharger Excel
 export const handleDownloadExcel = (dataEntries) => {
   const now = new Date();
   const formattedDate = now.toLocaleString();
@@ -32,7 +31,6 @@ export const handleDownloadExcel = (dataEntries) => {
   XLSX.writeFile(workbook, "donnees_capteur_IDT.xlsx");
 };
 
-// Télécharger graphique PNG
 export const downloadChartAsPNG = (chartRef, fileName) => {
   if (!chartRef.current) return;
 
@@ -51,6 +49,7 @@ export const downloadChartAsPNG = (chartRef, fileName) => {
 
   ctx.drawImage(originalCanvas, 0, 0);
 
+  // Ajoute date/heure
   ctx.fillStyle = "black";
   ctx.font = "16px Arial";
   ctx.fillText(`Téléchargé le : ${now}`, 10, height + 25);
@@ -61,17 +60,16 @@ export const downloadChartAsPNG = (chartRef, fileName) => {
   link.click();
 };
 
-// Télécharger PDF
-export const downloadChartsAsPDF = (lineChartRef) => {
+export const downloadChartsAsPDF = (chartRef) => {
   const now = new Date().toLocaleString();
   const pdf = new jsPDF({
     orientation: "landscape",
     unit: "px",
-    format: [lineChartRef.current.width, lineChartRef.current.height + 60],
+    format: [chartRef.current.width, chartRef.current.height + 60],
   });
 
-  if (lineChartRef.current) {
-    const canvas = lineChartRef.current;
+  if (chartRef.current) {
+    const canvas = chartRef.current;
     const imgData = canvas.toDataURL("image/png", 1.0);
 
     const imgWidth = canvas.width * 0.8;

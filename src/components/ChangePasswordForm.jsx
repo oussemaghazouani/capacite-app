@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { getAuth, EmailAuthProvider, reauthenticateWithCredential, updatePassword } from "firebase/auth";
+import { inputStyle } from "../styles/buttonStyles";
 
 function ChangePasswordForm({ onClose, buttonStyle }) {
   const [currentPassword, setCurrentPassword] = useState("");
@@ -9,13 +10,6 @@ function ChangePasswordForm({ onClose, buttonStyle }) {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const user = getAuth().currentUser;
-
-  const inputStyle = {
-    padding: 12,
-    borderRadius: 8,
-    border: "1px solid #ccc",
-    fontSize: 16,
-  };
 
   const handlePasswordChange = async (e) => {
     e.preventDefault();

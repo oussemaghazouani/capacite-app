@@ -1,7 +1,8 @@
 import React from "react";
 import ChangePasswordForm from "./ChangePasswordForm";
+import { buttonStyle } from "../styles/buttonStyles";
 
-function Settings({ onClose, buttonStyle }) {
+function Settings({ onClose }) {
   return (
     <div style={{
       padding: 80,
@@ -17,5 +18,6 @@ function Settings({ onClose, buttonStyle }) {
     </div>
   );
 }
+
 
 export default Settings;
