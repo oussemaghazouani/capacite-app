@@ -1,0 +1,135 @@
+/* Animations */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+/* Styles globaux */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fa;
+}
+
+/* Boutons principaux */
+.primary-button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #fda3d7 0%, #7fb3f5 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(127, 179, 245, 0.4);
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.primary-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(127, 179, 245, 0.6);
+}
+
+/* Boutons toolbar */
+.toolbar-button {
+  padding: 10px 20px;
+  height: 45px;
+  min-width: 150px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #fda3d7 0%, #7fb3f5 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(127, 179, 245, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.toolbar-button:hover {
+  transform: scale(1.05);
+}
+
+/* Inputs */
+.input-field {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-field:focus {
+  box-shadow: 0 0 8px 2px #00aaff;
+}
+
+/* Container principal */
+.main-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+/* Cartes */
+.card {
+  background: rgba(255,255,255,0.3);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(127, 192, 245, 0.83);
+  margin-bottom: 40px;
+}
+
+/* En-tête */
+.header-gradient {
+  background: linear-gradient(135deg, #fda3d7 0%, #7fb3f5 100%);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(127, 179, 245, 0.4);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+/* Tableau */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  text-align: center;
+  color: #2d2d2d;
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(127, 192, 245, 0.83);
+}
+
+.data-table th {
+  padding: 12px;
+  background: linear-gradient(135deg, #fda3d7 0%, #7fb3f5 100%);
+  color: #ffffff;
+}
+
+.data-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.data-table tr:hover {
+  background-color: #f0f8ff;
+}
+
+.data-table .selected-row {
+  background-color: #ffdede;
+}
